@@ -1,0 +1,32 @@
+Exercises
+
+1. Time complexity is a function that estimates the time it takes for a program
+to execute. It is important to determine the time complexity of algorithms
+so that we can test and improve their efficiency.
+
+2. Runtime is the physical time duration, or time complexity, of an algorithm.
+
+3. First, you must add up how many instructions the algorithm will execute
+as a function of the size of its input. Then, you simplify the expression to
+the largest term and drop any constants.
+
+4. In order of most efficient to least:
+- Constant growth rate
+- Logarithmic growth rate
+- Linear growth rate
+- Log-linear growth rate
+- Quadratic growth rate
+- Exponential growth rate
+- Mega-quick growth O(!n)
+
+5. Investments and finances are an example of exponential growth. Over time, the
+amount of money that you initially invested starts to compound interest and
+grows exponentially.
+
+6. O(n) - Linear growth rate.
+
+7. O(n^2) - Quadratic growth rate.
+
+8. O(2^n) - Exponential growth rate.
+
+9. The most efficient would be the first code snippet with the linear search.
