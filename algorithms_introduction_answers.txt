@@ -1,0 +1,49 @@
+1.
+
+FUNCTION makeCoffee
+    SET coffeeMachine to ON
+      IF coffeeMachine isHeating
+          SET water to 10 oz.
+          SET kcup.isInserted to true
+      END IF
+    IF coffeeMachine isDoneHeating
+    SET coffeeMachine to brewing
+    END IF
+END FUNCTION
+
+FUNCTION washDishes
+    WHILE kitchenSink !isempty
+      SET dishesInSink equal to numberOfDirtyDishes
+      SET water to ON
+      FUNCTION washDish
+      dishesInSink--
+    END WHILE
+END FUNCTION
+
+FUNCTION brushTeeth
+    IF teeth !isBrushed
+        SET water to ON
+        SET toothbrush equal toothbrush plus toothpaste
+        FUNCTION startBrushing
+    END IF
+END FUNCTION
+
+2. Tesla has a really efficient self-driving algorithm that has made them
+extremely successful and at the cutting-edge of technology. Their algorithm
+is impressive because it makes an enormous amount of calculations every second
+to not only keep a driver safe, but also to get them from point A to point B
+without any input from the driver.
+
+YouTube also has a very successful algorithm that they use for generating the
+content that every user sees when he or she logs in to their YouTube account.
+The algorithm is intelligent enough that it knows what types of videos you are
+watching and recommends similar content from other creators.
+
+The way that in-n-out makes their burgers is an efficient algorithm as well
+because they are able to replicate the same experience and same taste from their
+burgers no matter what restaurant you visit. The success of their "algorithm"
+makes it so that their burgers are always consistent.
+
+3. I believe that an efficient algorithm needs to be consistent and accurate
+in the shortest amount possible. There needs to be a perfect balance of results
+and time so that you can maximize the efficiency of an algorithm.
