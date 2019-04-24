@@ -1,0 +1,61 @@
+Exercises
+
+1. Searching through your closet for a shirt would be an example of using linear
+search. I personally do not have them sorted in any particular order so I start
+at the beginning of the shirts and search through them in order until I find
+the one I'm searching for.
+
+2. An example of a binary search would be searching for a specific book in a
+library. The books are ordered alphabetically so you can start down the aisle
+where the title of the book might be, eliminating all of the other aisles. Then,
+you keep dividing until you find the book.
+
+3. It would take seven iterations using linear search.
+
+4. It would take three iterations using binary search.
+
+5. Since the collection is unsorted, we would have to use a linear search
+because we wouldn't be able to set highs, lows, or mids if the collection isn't
+in order.
+
+6. Taking time complexity into consideration, I would choose binary search because
+we could quickly eliminate a big portion of the data that we need to search
+through.
+
+Programming Assignment
+
+1.
+function findWord(collection, word) {
+  let low = 0;
+  let high = collection.length - 1;
+
+  while(low <= high) {
+    let mid = Math.round((low + high) / 2);
+    if (collection[mid] > word) {
+      high = mid - 1;
+    } else if (collection[mid] < word) {
+      high = mid + 1;
+    } else {
+      return word + " is in index " + mid + ".";
+    }
+    return "Word is not in the list.";
+  }
+}
+
+var example = ["Hey", "Hi", "Hello"];
+
+console.log(findWord(example, "Hi"));
+
+2.
+function netFish(collection, fishType) {
+    for(i = 0; i < collection.length; i++) {
+      if(collection[i] === fishType) {
+        return "You've netted the " + fishType + ".";
+      }
+    }
+  return "This fish is not in the tank."
+}
+
+var example = ["Betta Fish", "Great White Shark", "White-Spotted Goldfish"];
+
+console.log(netFish(example, "White-Spotted Goldfish"));
