@@ -1,0 +1,57 @@
+Exercises
+
+1. An iterative function loops over code while or if a condition is true. A
+recursive function calls itself again to repeat the code and usually has a
+base case to end the loop. A for loop to count downwards from 100 is an iterative
+function. A function that calculates factorials would be an example of recursion.
+
+2.
+- Binary Search
+- Fibonacci Sequence
+- Quick Sort
+- Factorial Operation
+- Merge Sort
+
+3. A factorial algorithm would be a good time to use recursion because you have
+at least one base case to start with and you are going to be using the same
+function to calculate the factorials. An iteration, like a loop, would be best
+used if you are reading over a collection of data.
+
+4. All three algorithms achieve the same result but the difference is that the
+algorithms that use recursion have a lot more steps than the ones that are
+iterative. With recursion, there are a lot more conditional statements instead
+of having for loops or while loops like in iteration.
+
+5.
+function recursiveCount(data) {
+  let counter = 1;
+  for (let i = 0; i < data.length; i++) {
+    if (typeof data[i] === "object") {
+      counter += recursiveCount(data[i])
+    } else {
+      console.log(counter++)
+    }
+  }
+  return counter;
+}
+
+recursiveCount([2,3,5,7,4]);
+
+6.
+function isPalindrome(word) {
+  let wordLength = word.length
+  if (wordLength === 0 || wordLength === 1) {
+    return "Yes, it is a palindrome."
+  }
+  if (word[0] === word[ wordLength - 1 ]) {
+    return isPalindrome(word.slice(1, wordLength - 1))
+  }
+  return "Not a palindrome."
+}
+
+console.log(isPalindrome("tacocat"));
+
+7. This shows properties of recursion because when you search for "recursion", 
+Google will show you results for it but will also give you a link to search
+again with "recursion". If you keep pressing the link, it will keep calling
+that search over and over again, demonstrating recursion.
