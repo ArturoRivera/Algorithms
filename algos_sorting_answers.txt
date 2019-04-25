@@ -1,0 +1,52 @@
+Exercises
+
+1.
+var array1 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+
+function swap(array, i, j) {
+  var temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+function bubbleSort(array) {
+  var swapped;
+  do {
+    swapped = false;
+    for(var i = 0; i < array.length; i++) {
+      if(array[i] && array[i + 1] && array[i] > array[i + 1]) {
+        swap(array, i, i + 1);
+        swapped = true;
+      }
+    }
+  } while(swapped);
+  return array;
+}
+
+console.log(bubbleSort(array1));
+
+2.
+FUNCTION quickSort(data)
+  IF data.length < 2
+    RETURN data
+  END IF
+  SET pivot to data[0]
+  SET lesser
+  SET greater
+  FOR i = FIRST INDEX of data to LAST INDEX of data - 1
+    IF data < pivot
+      PUSH data[i] to lesser
+    ELSE
+      PUSH data[i] to greater
+  END FOR
+  RETURN concat quickSort(lesser) + pivot + quickSort(greater)
+
+3. Quick sort and merge sort are more efficient than other sorting algorithms because
+they first separate the data collections into smaller collections and sort them
+that way. They both work well with large data sets because they can break them
+down first, and sort the smaller collections.
+
+4. In bucket sort, you first partition the whole array or collection into smaller
+buckets and then sort those buckets using another algorithm or by recursively
+calling bucket sort. Bucket sort is mainly useful when input is uniformly
+distributed over a range.
