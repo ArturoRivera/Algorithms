@@ -1,0 +1,52 @@
+1. What is the difference between readdirSync and readdir?
+readdirSync is a blocking and synchronous method which means that the program
+will have to execute the method first before moving on to the next part of the
+code. readdir is non-blocking and asynchronous which means that we can run
+another part of the code while the method runs in the background.
+
+2. What is the event loop and how does it handle asynchronous requests?
+The event loop is a system in node that allows for the sequential processing
+of tasks. They are taken from the event queue and processed sequentially, unless
+it is an asynchronous request, in which case node asks the operating system
+to notify it when it is ready for processing.
+
+
+3. Given the following code, specify whether the program is asynchronous and
+non-blocking or synchronous and blocking or synchronous and non-blocking.
+
+Synchronous and blocking
+
+4. Given the following code, specify whether the program is asynchronous and
+non-blocking or synchronous and blocking or synchronous and non-blocking.
+
+Asynchronous and non-blocking
+
+5. In what order will the console.log statements execute in the code below?
+
+C, A, B
+
+6. setTimeout is a JavaScript function which calls a function after a set amount
+of milliseconds. Given the following code, explain in what sequence the
+functions will run and why.
+
+The greeting method would be called first but it will time out for 100 milliseconds,
+and since it is asynchronous it will run in the background. While that is running
+in the background, the hello function will be called. The final output would be:
+hello friend.
+
+7. Create a function which utilizes a callback. Make sure to add console.log
+statements to understand when your callback function is called.
+
+function doSomething(callback) {
+  console.log('First function called');
+  callback('Passed to callback');
+  console.log('First function finished');
+}
+
+function callbackFunction(a) {
+  console.log('Callback');
+  console.log(a);
+  console.log('Callback finished');
+}
+
+doSomething(callbackFunction);
